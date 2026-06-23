@@ -14,6 +14,12 @@ Create shared virtual rooms, embed media from YouTube/Twitch/Spotify, collaborat
 
 [Getting Started](#-getting-started) · [Features](#-features) · [Architecture](#-architecture) · [Contributing](#-contributing)
 
+---
+
+## 🚀 Live Preview
+
+![CONEXUS Hero](./Screenshot%202026-06-22%20235958.png)
+
 </div>
 
 ---
@@ -34,141 +40,124 @@ Create shared virtual rooms, embed media from YouTube/Twitch/Spotify, collaborat
 | 🔐 **Auth & Profiles** | JWT-based authentication with customizable user profiles (avatar, banner, bio) |
 | ⚙️ **Room Settings** | Granular permission controls — toggle camera, mic, content adding, and public access |
 
-## 🏗️ Architecture
+---
 
-```
-conexus/
-├── apps/
-│   ├── server/          # Express 5 + Socket.IO backend
-│   │   ├── src/
-│   │   │   ├── auth/        # JWT utilities (sign, verify, hash)
-│   │   │   ├── middleware/  # Express middleware (auth guard)
-│   │   │   ├── rooms/      # In-memory room state & cleanup
-│   │   │   ├── routes/     # REST API (auth, users, rooms, chat, media, upload)
-│   │   │   ├── socket/     # WebSocket event handlers
-│   │   │   ├── types/      # Database row types & Express augmentations
-│   │   │   ├── db.ts       # SQLite schema & connection
-│   │   │   └── index.ts    # Server entry point
-│   │   └── uploads/        # User-uploaded files (gitignored)
-│   │
-│   └── web/             # React 19 + Vite frontend
-│       └── src/
-│           ├── components/room/    # Room UI (chat, toolbar, media, widgets)
-│           ├── hooks/              # Custom React hooks
-│           ├── lib/                # API client & utilities
-│           ├── pages/              # Auth, Dashboard, Room views
-│           └── store/              # Zustand state management
-│
-├── packages/
-│   └── shared-types/    # Shared TypeScript interfaces (events, state)
-│
-├── .env.example         # Root environment template
-├── tsconfig.base.json   # Shared TypeScript configuration
-└── package.json         # Workspace root (npm workspaces)
-```
+## 🖼️ Product Showcase
 
-### Tech Stack
+### 🧠 Main Interface
+![UI](./Screenshot%202026-06-22%20235958.png)
 
-| Layer | Technology |
-|---|---|
-| **Frontend** | React 19, Vite 8, Zustand 5, React Router 7, Lucide Icons |
-| **Backend** | Express 5, Socket.IO 4, better-sqlite3, bcryptjs, jsonwebtoken |
-| **Real-time** | Socket.IO (WebSocket) for state sync, WebRTC (simple-peer) for screen sharing |
-| **Database** | SQLite with WAL mode — zero-config, file-based persistence |
-| **Shared** | `@conexus/shared-types` — typed Socket.IO events & room state |
-| **Language** | TypeScript 6 end-to-end (strict mode, no `any` casts) |
-| **Monorepo** | npm workspaces |
+### 💬 Real-time Chat & Activity
+![Chat](./Screenshot%202026-06-23%20000117.png)
 
-## 🚀 Getting Started
+### 🖱️ Live Cursor Synchronization
+![Cursors](./Screenshot%202026-06-23%20000200.png)
 
-### Prerequisites
+### 🎥 Media Embedding System
+![Media](./Screenshot%202026-06-23%20000225.png)
 
-- **Node.js** ≥ 18
-- **npm** ≥ 9
+### 🎨 Collaborative Whiteboard
+![Whiteboard](./Screenshot%202026-06-23%20000749.png)
 
-### Installation
+### 📊 Interactive Tools (Polls / Tasks / Timers)
+![Tools](./Screenshot%202026-06-23%20000816.png)
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/conexus.git
-cd conexus
+### 🧩 Room Controls & Permissions
+![Controls](./Screenshot%202026-06-23%20000959.png)
 
-# 2. Install all dependencies (workspaces)
-npm install
-
-# 3. Set up environment variables
-cp apps/server/.env.example apps/server/.env
-cp apps/web/.env.example apps/web/.env
-
-# 4. (Optional) Generate a secure JWT secret for production
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
-# Paste the output into apps/server/.env as JWT_SECRET=<value>
-```
-
-### Development
-
-```bash
-# Start both frontend and backend concurrently
-npm run dev
-
-# Or start individually:
-npm run dev:web      # Vite dev server (default: http://localhost:5173)
-npm run dev:server   # Express server  (default: http://localhost:3001)
-```
-
-The SQLite database is created automatically on first run at `apps/server/conexus.db`.
-
-### Environment Variables
-
-#### Server (`apps/server/.env`)
-
-| Variable | Required | Default | Description |
-|---|---|---|---|
-| `PORT` | No | `3001` | HTTP server port |
-| `JWT_SECRET` | **Production** | dev fallback | JWT signing secret — **must be set in production** |
-| `SERVER_URL` | No | `http://localhost:3001` | Base URL for uploaded file URLs |
-| `TWITCH_CLIENT_ID` | No | — | Twitch API Client-ID for stream search |
-
-#### Web (`apps/web/.env`)
-
-| Variable | Required | Default | Description |
-|---|---|---|---|
-| `VITE_WEBSOCKET_URL` | No | `http://localhost:3001` | URL of the CONEXUS server |
-
-## 🛡️ Security
-
-- **JWT Authentication** — Stateless, expiring tokens (7-day TTL) with bcrypt password hashing (cost factor 12)
-- **Environment-aware secrets** — The server refuses to start in production without a proper `JWT_SECRET`
-- **No hardcoded credentials** — All sensitive values are loaded from environment variables
-- **Input sanitization** — User positions are clamped to world bounds; auth checks on every socket event
-- **SQLite WAL mode** — Safe concurrent reads without locking
-
-## 📐 Design Decisions
-
-| Decision | Rationale |
-|---|---|
-| **SQLite over Postgres** | Zero-config setup for local dev and portfolio demos; WAL mode handles concurrent access well |
-| **In-memory room state** | User positions update at 20Hz — too fast for disk; ephemeral state lives in memory, persistent data goes to SQLite |
-| **Shared types package** | Single source of truth for Socket.IO event signatures prevents client/server drift |
-| **Modular route files** | Each domain (auth, rooms, chat, media) lives in its own file for clear ownership |
-| **Zustand over Redux** | Minimal boilerplate, excellent TypeScript support, and built-in subscriptions for React 19 |
-
-## 🤝 Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feat/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feat/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
+### ⚙️ Settings & Configuration
+![Settings](./Screenshot%202026-06-23%20001132.png)
 
 ---
 
+## 🏗️ Architecture
+
+
+conexus/
+├── apps/
+│ ├── server/ # Express 5 + Socket.IO backend
+│ │ ├── src/
+│ │ │ ├── auth/
+│ │ │ ├── middleware/
+│ │ │ ├── rooms/
+│ │ │ ├── routes/
+│ │ │ ├── socket/
+│ │ │ ├── types/
+│ │ │ ├── db.ts
+│ │ │ └── index.ts
+│ │ └── uploads/
+│ │
+│ └── web/ # React 19 + Vite frontend
+│ └── src/
+│ ├── components/
+│ ├── hooks/
+│ ├── lib/
+│ ├── pages/
+│ └── store/
+│
+├── packages/
+│ └── shared-types/
+│
+├── .env.example
+├── tsconfig.base.json
+└── package.json
+
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:** React 19, Vite, Zustand, React Router
+- **Backend:** Express 5, Socket.IO
+- **Database:** SQLite (WAL mode)
+- **Realtime:** WebSockets + WebRTC (simple-peer)
+- **Language:** TypeScript (strict mode)
+- **Monorepo:** npm workspaces
+
+---
+
+## 🧠 Design Philosophy
+
+- Real-time first architecture
+- Minimal latency socket updates (20Hz state sync)
+- Shared type system between client & server
+- In-memory ephemeral room state
+- Persistent storage only where needed (SQLite)
+
+---
+
+## ⚙️ Getting Started
+
+```bash
+# Clone repository
+git clone https://github.com/YOUR_USERNAME/conexus.git
+cd conexus
+
+# Install dependencies
+npm install
+
+# Setup environment
+cp apps/server/.env.example apps/server/.env
+cp apps/web/.env.example apps/web/.env
+
+# Run development servers
+npm run dev
+🛡️ Security
+JWT authentication with bcrypt hashing
+Environment-based secret management
+No hardcoded credentials
+Input validation on socket events
+SQLite WAL safe concurrency
+🤝 Contributing
+Fork repo
+Create branch
+Commit changes
+Push branch
+Open PR
+📝 License
+
+MIT License
+
 <div align="center">
-  <sub>Built with ❤️ as a portfolio project</sub>
-</div>
+Built with ❤️ as a portfolio project
+</div> ``
