@@ -96,23 +96,24 @@ conexus/
 ---
 
 ## 🚀 Getting Started
-bash:
+
+```bash
 git clone https://github.com/YOUR_USERNAME/conexus.git
 cd conexus
 npm install
 npm run dev
-
 🛡️ Security
 JWT authentication
 bcrypt hashing
 Environment-based secrets
 Input validation
 SQLite WAL safety
-
 🤝 Contributing
+
 Fork → Branch → Commit → PR
 
 📝 License
+
 MIT License
 
 <div align="center">
