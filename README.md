@@ -129,9 +129,13 @@ MIT License
 ```
 ## Trademark & Branding
 ```
-CONEXUS and the CONEXUS logo are the intellectual property of Ilyass Benkhayi.
+Copyright (c) 2026 Ilyass Benkhayi
+
 The MIT License applies only to the source code contained in this repository.
-Use of the CONEXUS name, logo, branding, visual identity, or marketing materials without explicit permission is prohibited.
+
+The CONEXUS name, logo, visual identity, artwork, designs, screenshots, and branding materials are not licensed under the MIT License.
+
+No permission is granted to use, reproduce, modify, or distribute the CONEXUS branding, logo, or visual identity without explicit written permission from the author.
 ```
 <div align="center">
 
