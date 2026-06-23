@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div align="center">
 
 # 🔗 CONEXUS
@@ -16,33 +15,11 @@ Create shared virtual rooms, embed media, collaborate in real-time with cursors,
 ![CONEXUS Hero](./docs/hero.png)
 
 </div>
-=======
-# CONEXUS
-
-## 🌐 Overview
-
-CONEXUS is a real-time virtual collaboration platform designed to make online interaction more immersive, engaging, and human-centered.
-
-It enables users to connect in shared digital spaces, communicate in real time, and interact through media, messaging, and synchronized experiences.
-
-The goal is to move beyond traditional chat applications and create a more dynamic and community-driven online environment.
-
----
-
-## 💡 Motivation
-
-Modern communication platforms often feel fragmented, overly optimized, and disconnected from real human interaction.
-
-CONEXUS was created to explore a different approach — one where digital spaces feel more natural, interactive, and alive.
-
-The project focuses on rebuilding the sense of presence and collaboration in online environments.
->>>>>>> a7f28f69feab89174f69c57dba5ff1f23fc79c7b
 
 ---
 
 ## ✨ Features
 
-<<<<<<< HEAD
 | Feature | Description |
 |---|---|
 | 🎥 Media Embedding | YouTube, Twitch, Spotify, SoundCloud support |
@@ -62,28 +39,27 @@ The project focuses on rebuilding the sense of presence and collaboration in onl
 ## 🖼️ Product Showcase
 
 ### 🧠 Main Interface
-![UI](./docs/chat.png)
+![UI](./docs/cursors.png)
 
 ### 💬 Chat
-![Chat](./docs/chat.png)
+![Chat](./docs/controls.png)
 
 ### 🖱️ Cursors
-![Cursors](./docs/cursors.png)
+![Cursors](./docs/whiteboard.png)
 
 ### 🎥 Media
-![Media](./docs/media.png)
+![Media](./docs/tools.png)
 
 ### 🎨 Whiteboard
-![Whiteboard](./docs/whiteboard.png)
+![Whiteboard](./docs/settings.png)
 
 ### 📊 Tools
-![Tools](./docs/tools.png)
+![Tools](./docs/media.png)
 
 ### 🧩 Controls
-![Controls](./docs/controls.png)
+![Controls](./docs/chat.png)
 
 ### ⚙️ Settings
-![Settings](./docs/settings.png)
 
 ---
 
@@ -128,7 +104,6 @@ git clone https://github.com/YOUR_USERNAME/conexus.git
 cd conexus
 npm install
 npm run dev
-
 🛡️ Security
 JWT authentication
 bcrypt hashing
@@ -144,5 +119,7 @@ Fork → Branch → Commit → PR
 MIT License
 
 <div align="center">
-  <sub>Built with ❤️ as a portfolio project</sub>
+
+Built with ❤️ as a portfolio project
+
 </div>
