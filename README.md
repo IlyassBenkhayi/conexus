@@ -41,25 +41,23 @@ Create shared virtual rooms, embed media, collaborate in real-time with cursors,
 ### 🧠 Main Interface
 ![UI](./docs/cursors.png)
 
-### 💬 Chat
+### 🧩 Room Setup
 ![Chat](./docs/controls.png)
 
-### 🖱️ Cursors
+### 🖱️ Open canvas
 ![Cursors](./docs/whiteboard.png)
 
-### 🎥 Media
+### 📊 Tools
 ![Media](./docs/tools.png)
 
-### 🎨 Whiteboard
+### ⚙️ Settings
 ![Whiteboard](./docs/settings.png)
 
-### 📊 Tools
+### 🎥 Media
 ![Tools](./docs/media.png)
 
-### 🧩 Controls
+### 💬 Chat
 ![Controls](./docs/chat.png)
-
-### ⚙️ Settings
 
 ---
 
@@ -98,24 +96,23 @@ conexus/
 ---
 
 ## 🚀 Getting Started
-
 bash:
 git clone https://github.com/YOUR_USERNAME/conexus.git
 cd conexus
 npm install
 npm run dev
+
 🛡️ Security
 JWT authentication
 bcrypt hashing
 Environment-based secrets
 Input validation
 SQLite WAL safety
-🤝 Contributing
 
+🤝 Contributing
 Fork → Branch → Commit → PR
 
 📝 License
-
 MIT License
 
 <div align="center">
