@@ -1,0 +1,14 @@
+{
+  "name": "@conexus/shared-types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript interfaces for CONEXUS socket events and room state",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "keywords": ["conexus", "shared-types", "socket.io"],
+  "license": "MIT",
+  "type": "commonjs"
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*"],
+  "ts-node": {
+    "files": true,
+    "ignore": [
+      "(?:^|/)node_modules/(?!@conexus/)"
+    ]
+  }
+}

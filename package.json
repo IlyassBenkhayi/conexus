@@ -1,0 +1,19 @@
+{
+  "name": "conexus",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w @conexus/web",
+    "dev:server": "npm run dev -w @conexus/server",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:server\"",
+    "build": "npm run build --workspaces",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
