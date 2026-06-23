@@ -103,17 +103,18 @@ git clone https://github.com/YOUR_USERNAME/conexus.git
 cd conexus
 npm install
 npm run dev
-🛡️ Security
+
+## 🛡️ Security
 JWT authentication
 bcrypt hashing
 Environment-based secrets
 Input validation
 SQLite WAL safety
-🤝 Contributing
 
+## 🤝 Contributing
 Fork → Branch → Commit → PR
 
-📝 License
+## 📝 License
 
 MIT License
 ```
