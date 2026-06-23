@@ -97,6 +97,7 @@ conexus/
 
 ## 🚀 Getting Started
 
+```
 bash:
 git clone https://github.com/YOUR_USERNAME/conexus.git
 cd conexus
@@ -115,7 +116,7 @@ Fork → Branch → Commit → PR
 📝 License
 
 MIT License
-
+```
 <div align="center">
 
 Built with ❤️ as a portfolio project
