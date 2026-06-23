@@ -97,7 +97,7 @@ conexus/
 
 ## 🚀 Getting Started
 
-```bash
+bash:
 git clone https://github.com/YOUR_USERNAME/conexus.git
 cd conexus
 npm install
