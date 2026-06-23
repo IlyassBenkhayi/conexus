@@ -127,6 +127,12 @@ Fork → Branch → Commit → PR
 ```
 MIT License
 ```
+## Trademark & Branding
+```
+CONEXUS and the CONEXUS logo are the intellectual property of Ilyass Benkhayi.
+The MIT License applies only to the source code contained in this repository.
+Use of the CONEXUS name, logo, branding, visual identity, or marketing materials without explicit permission is prohibited.
+```
 <div align="center">
 
 Built with ❤️ as a portfolio project
