@@ -39,28 +39,28 @@ Create shared virtual rooms, embed media, collaborate in real-time with cursors,
 ## 🖼️ Product Showcase
 
 ### 🧠 Main Interface
-![UI](./Screenshot%202026-06-22%20235958.png)
+![UI](<img width="1919" height="992" alt="Screenshot 2026-06-22 235958" src="https://github.com/user-attachments/assets/209292d9-738f-446f-9477-d8736aa82e77" />)
 
 ### 💬 Chat
-![Chat](./Screenshot%202026-06-23%20000117.png)
+![Chat](<img width="1919" height="989" alt="Screenshot 2026-06-23 000117" src="https://github.com/user-attachments/assets/8d24ed12-ec9d-4964-90ee-6e46f7116560" />)
 
 ### 🖱️ Cursors
-![Cursors](./Screenshot%202026-06-23%20000200.png)
+![Cursors](<img width="1919" height="990" alt="Screenshot 2026-06-23 000200" src="https://github.com/user-attachments/assets/2b6b25de-9280-480e-8c7b-029882587305" />)
 
 ### 🎥 Media
-![Media](./Screenshot%202026-06-23%20000225.png)
+![Media](<img width="1919" height="993" alt="Screenshot 2026-06-23 000225" src="https://github.com/user-attachments/assets/452e0e8a-5178-49f3-90a2-6b19f0036070" />)
 
 ### 🎨 Whiteboard
-![Whiteboard](./Screenshot%202026-06-23%20000749.png)
+![Whiteboard](<img width="1919" height="990" alt="Screenshot 2026-06-23 000749" src="https://github.com/user-attachments/assets/00702a79-1625-421c-9cb1-249a2905c7b4" />)
 
 ### 📊 Tools
-![Tools](./Screenshot%202026-06-23%20000816.png)
+![Tools](<img width="1919" height="992" alt="Screenshot 2026-06-23 000816" src="https://github.com/user-attachments/assets/0d7facf0-6813-4341-9c93-11e971cc37d3" />)
 
 ### 🧩 Controls
-![Controls](./Screenshot%202026-06-23%20000959.png)
+![Controls](<img width="1919" height="993" alt="Screenshot 2026-06-23 000959" src="https://github.com/user-attachments/assets/70203ded-5887-4c51-832a-6d93130a8ca3" />)
 
 ### ⚙️ Settings
-![Settings](./Screenshot%202026-06-23%20001132.png)
+![Settings](<img width="1919" height="991" alt="Screenshot 2026-06-23 001132" src="https://github.com/user-attachments/assets/2b8cbff3-983d-44ea-895a-12316b3968bf" />)
 
 ---
 
@@ -100,7 +100,7 @@ conexus/
 
 ## 🚀 Getting Started
 
-```bash
+bash:
 git clone https://github.com/YOUR_USERNAME/conexus.git
 cd conexus
 npm install
@@ -124,4 +124,4 @@ MIT License
 
 Built with ❤️ as a portfolio project
 
-</div> ```
+</div> 
